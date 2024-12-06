@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACHUU FRIENDS COFFEE SHOP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.jpg" alt="Logo" id="logo-left">
+        <h1>ACHUU FRIENDS COFFEE SHOP</h1>
+        <p>Your go-to place for the best coffee and delicious food!</p>
+    </header>
+
+    <div id="menu">
+        <ul id="coffee-list"></ul>
+    </div>
+
+    <!-- Customization Page -->
+    <div id="customization" style="display:none;">
+        <h2>Customize Your Coffee</h2>
+        <form id="customization-form">
+            <label for="milk-options">Milk: </label>
+            <select id="milk-options">
+                <option value="Whole Milk">Whole Milk</option>
+                <option value="Almond Milk">Almond Milk</option>
+                <option value="Oat Milk">Oat Milk</option>
+            </select><br>
+
+            <label for="sweeteners">Sweetener: </label>
+            <select id="sweeteners">
+                <option value="Sugar">Sugar</option>
+                <option value="Honey">Honey</option>
+                <option value="Stevia">Stevia</option>
+            </select><br>
+
+            <label for="flavored-syrups">Flavored Syrup: </label>
+            <select id="flavored-syrups">
+                <option value="Vanilla">Vanilla</option>
+                <option value="Caramel">Caramel</option>
+                <option value="Hazelnut">Hazelnut</option>
+            </select><br>
+
+            <label for="spices">Spices: </label>
+            <select id="spices">
+                <option value="Cinnamon">Cinnamon</option>
+                <option value="Nutmeg">Nutmeg</option>
+            </select><br>
+
+            <label for="toppings">Toppings: </label>
+            <select id="toppings">
+                <option value="Whipped Cream">Whipped Cream</option>
+                <option value="Chocolate Shavings">Chocolate Shavings</option>
+            </select><br>
+
+            <label for="extras">Extras: </label>
+            <select id="extras">
+                <option value="Extra Shot">Extra Shot</option>
+                <option value="Decaf">Decaf</option>
+            </select><br>
+
+            <label for="quantity">Quantity: </label>
+            <input type="number" id="quantity" value="1" min="1"><br>
+
+            <button type="button" onclick="addToCart()">Add to Cart</button>
+        </form>
+        <button onclick="goBackToMenu()">Back to Menu</button>
+    </div>
+
+    <!-- Cart Popup -->
+    <div id="cart-popup" style="display:none;">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <button onclick="proceedToPayment()">Proceed to Payment</button>
+        <button onclick="closeCartPopup()">Close Cart</button>
+    </div>
+
+    <!-- Payment Page -->
+    <div id="payment" style="display:none;">
+        <h2>Payment</h2>
+        <button onclick="payWithApplePay()">Pay with Apple Pay</button>
+        <button onclick="payWithCreditCard()">Pay with Credit/Debit Card</button>
+        <button onclick="payWithEBT()">Pay with EBT</button>
+        <button onclick="payWithPayPal()">Pay with PayPal</button>  
+        <button onclick="cancelTransaction()">Cancel Transaction</button>
+
+    </div>
+
+    <!-- Thank You Message -->
+    <div id="thank-you" style="display:none;">
+        <h2>Thank you for your payment!</h2>
+        <p>Your payment was successful. Thanks for shopping with us. See you next time! Have a great day!</p>
+    </div>
+</section>
+        
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2024 ACHUU FRIENDS COFFEE SHOP. All rights reserved. <img src="images/logo.jpg" alt="Logo" id="logo-left"></p>
+    </footer>
+
+    <div class="scrolling-banner">
+        <p><strong>Buy 2 Get 1 Free on All Coffees! Hurry, Limited Time Offer!</strong></p>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
